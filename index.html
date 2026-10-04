@@ -1,300 +1,32 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head><meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Dooooo｜3D Design Spatial Artist 展場設計作品集">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%23F08A24'/%3E%3Crect x='7' y='10' width='18' height='16' rx='8' fill='%23FFE6C6'/%3E%3Ccircle cx='12.5' cy='17' r='1.4' fill='%232A1B12'/%3E%3Ccircle cx='19.5' cy='17' r='1.4' fill='%232A1B12'/%3E%3Cpath d='M12 10 11 5M20 10l1-5' stroke='%232A1B12' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
-<style>[hidden]{display:none!important}img{max-width:100%}</style>
-<title>Dooooo 作品集</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=Outfit:wght@400;500;600&display=swap">
-<style>
-:root{
-  --bg:#FFFAF4; --bg-2:#FFF1E2; --surface:#FFFFFF; --ink:#2A1B12; --ink-2:#6B5443; --line:#F2DFCB; --line-2:#E5C9A8;
-  --orange:#F08A24; --orange-text:#B4500C; --orange-soft:#FFDDB8; --spot:#C96A1C; --gir:#F5A54A; --gir-light:#FFE6C6;
-  --on-orange:#2A1B12; --dk:#2A1B12; --paper:#FFFFFF; --stage:#FFF3E4; --floor:#FBE3C4; --shadow:0 10px 30px rgba(120,60,10,.12);
-  --pa-t:#FFDDB0; --pa-l:#F5A34B; --pa-r:#D9762A;
-  --pb-t:#FFFBF5; --pb-l:#F4E4D0; --pb-r:#E2CBB0;
-  --pc-t:#E9B274; --pc-l:#C98543; --pc-r:#A9672C;
-  --f-display:"Chiron GoRound TC","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  --blend:multiply;
-  --f-en:"Outfit","Noto Sans TC",sans-serif;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#1B130E; --bg-2:#251A13; --surface:#2A1E16; --ink:#FBEBDC; --ink-2:#C9B09C; --line:#3E2D20; --line-2:#5A4230;
-    --orange:#FF9F40; --orange-text:#FFB566; --orange-soft:#5B3B1F; --spot:#E58A38; --gir:#F5A54A; --gir-light:#FFE6C6;
-    --blend:normal;--paper:#31241B; --stage:#2E2118; --floor:#3D2B1D; --shadow:0 10px 30px rgba(0,0,0,.4);
-    --pa-t:#FFC98A; --pa-l:#F0932F; --pa-r:#C86A20;
-    --pb-t:#F1E2CF; --pb-l:#D9C3A8; --pb-r:#BBA184;
-    --pc-t:#C98A50; --pc-l:#A56A31; --pc-r:#845020;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#1B130E; --bg-2:#251A13; --surface:#2A1E16; --ink:#FBEBDC; --ink-2:#C9B09C; --line:#3E2D20; --line-2:#5A4230;
-  --orange:#FF9F40; --orange-text:#FFB566; --orange-soft:#5B3B1F; --spot:#E58A38; --gir:#F5A54A; --gir-light:#FFE6C6;
-  --blend:normal;--paper:#31241B; --stage:#2E2118; --floor:#3D2B1D; --shadow:0 10px 30px rgba(0,0,0,.4);
-  --pa-t:#FFC98A; --pa-l:#F0932F; --pa-r:#C86A20;
-  --pb-t:#F1E2CF; --pb-l:#D9C3A8; --pb-r:#BBA184;
-  --pc-t:#C98A50; --pc-l:#A56A31; --pc-r:#845020;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
-h1,h2,h3,p,ol,ul{margin:0}
-ol,ul{padding:0;list-style:none}
-button{font:inherit;color:inherit;cursor:pointer}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
-.en{font-family:var(--f-en)}
-
-/* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-en);font-weight:600;font-size:18px;letter-spacing:.01em}
-.brand svg{width:34px;height:34px;flex:none}
-.nav{display:flex;gap:4px;flex-wrap:wrap}
-.nav a{text-decoration:none;font-size:14px;padding:6px 12px;border-radius:999px;color:var(--ink-2);transition:background .2s,color .2s}
-.nav a:hover{background:var(--orange-soft);color:var(--ink)}
-
-/* hero */
-.hero{padding-block:48px 40px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-en);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-text);font-weight:500}
-.eyebrow i{width:10px;height:10px;border-radius:3px;background:var(--orange);transform:rotate(12deg);display:inline-block}
-.hero h1{font-family:var(--f-display);font-weight:700;font-size:clamp(2.5rem,7vw,4.9rem);line-height:1.12;letter-spacing:.01em;margin-top:16px;text-wrap:balance}
-.hero h1 em{font-style:normal;color:var(--orange-text);background:linear-gradient(transparent 66%,var(--orange-soft) 66% 92%,transparent 92%)}
-.hero p.lead{margin-top:20px;max-width:none;color:var(--ink-2);font-size:17px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;border:2px solid var(--orange);transition:transform .2s,background .2s}
-.btn.pri{background:var(--orange);color:var(--on-orange)}
-.btn.pri:hover{transform:translateY(-2px)}
-.btn.ghost{color:var(--ink)}
-.btn.ghost:hover{background:var(--orange-soft)}
-.giraffe{width:100%;max-width:400px;height:auto;justify-self:center;display:block}
-.sway{transform-origin:167px 122px;animation:sway 6s ease-in-out infinite}
-@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(2deg)}}
-.jump{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;border-top:2px solid var(--ink)}
-.jump a{padding:16px 16px 4px 0;text-decoration:none;display:block}
-.jump b{display:block;font-family:var(--f-display);font-size:18px;font-weight:700}
-.jump span{display:block;font-size:13px;color:var(--ink-2);line-height:1.6;margin-top:2px}
-.jump a:hover b{color:var(--orange-text)}
-
-/* sections */
-section.blk{padding-block:72px 24px}
-.sec-head{display:grid;gap:10px;margin-bottom:32px;max-width:40em}
-.sec-head h2{font-family:var(--f-display);font-weight:700;font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.2}
-.sec-head p{color:var(--ink-2)}
-
-/* pitch cards */
-.pitch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 24px}
-.pcard{display:block;text-align:left;background:none;border:0;padding:0;width:100%}
-.pcard .cover{aspect-ratio:4/3;border-radius:16px;overflow:hidden;position:relative;background:var(--stage);border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
-.pcard:hover .cover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.pcard .badge{position:absolute;left:12px;top:12px;background:var(--orange);color:var(--on-orange);font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px;z-index:2}
-.pcard .hint{position:absolute;right:12px;bottom:12px;background:var(--surface);color:var(--ink);font-size:12px;padding:4px 12px;border-radius:999px;border:1px solid var(--line-2);z-index:2}
-.pcard h3{font-family:var(--f-display);font-size:21px;margin-top:14px;font-weight:700}
-.pcard .meta{font-family:var(--f-en);font-size:13px;color:var(--ink-2);letter-spacing:.03em}
-.pcard .desc{font-size:14.5px;color:var(--ink-2);margin-top:4px}
-
-/* sims masonry */
-.masonry{columns:3 260px;column-gap:18px}
-.sim{display:block;width:100%;margin:0 0 18px;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--stage);position:relative;break-inside:avoid;text-align:left}
-.sim .art{display:block;transition:transform .5s}
-.sim:hover .art{transform:scale(1.04)}
-.sim .cap{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(30,15,5,.72));color:#FFF6EC;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
-.sim .cap b{font-family:var(--f-display);font-size:16px}
-.sim .cap span{font-family:var(--f-en);font-size:12px;opacity:.9;white-space:nowrap}
-
-/* drawings */
-.seg{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--bg-2);border:1px solid var(--line);margin-bottom:24px}
-.seg button{border:0;background:none;padding:7px 18px;border-radius:999px;font-size:14px;color:var(--ink-2)}
-.seg button[aria-selected="true"]{background:var(--orange);color:var(--on-orange);font-weight:700}
-.dwg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-.dwg{display:block;text-align:left;background:none;border:0;padding:0;width:100%}
-.dwg .sheet{aspect-ratio:4/3;border-radius:6px;overflow:hidden;border:1px solid var(--line-2);background:var(--paper);box-shadow:4px 4px 0 var(--orange-soft);transition:transform .25s,box-shadow .25s}
-.dwg:hover .sheet{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--orange-soft)}
-.dwg b{display:block;margin-top:12px;font-size:15px}
-.dwg span{font-family:var(--f-en);font-size:12.5px;color:var(--ink-2);letter-spacing:.04em}
-
-/* about */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
-.portrait{aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:var(--orange-soft);position:relative;overflow:hidden;display:grid;place-items:end center;border:1px solid var(--line-2)}
-.portrait svg{width:82%;height:auto;display:block}
-.portrait small{position:absolute;top:18px;left:0;right:0;text-align:center;font-size:12px;color:var(--ink-2);letter-spacing:.06em}
-.about h3{font-family:var(--f-display);font-size:22px;margin-bottom:12px}
-.about .intro{font-size:17px;color:var(--ink-2);display:grid;gap:12px;margin-bottom:32px}
-.about .intro strong{color:var(--ink);font-weight:500}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
-.tags li{padding:6px 14px;border-radius:8px;background:var(--bg-2);border:1px solid var(--line-2);font-size:14px}
-.flow{display:grid;grid-template-columns:repeat(2,1fr);gap:0 28px;margin-bottom:32px;counter-reset:s}
-.flow li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line-2);counter-increment:s}
-.flow li::before{content:counter(s);font-family:var(--f-en);font-weight:600;font-size:15px;width:30px;height:30px;border-radius:50%;background:var(--orange);color:var(--on-orange);display:grid;place-items:center}
-.flow b{display:block;font-size:15.5px;line-height:1.5}
-.flow span{font-size:13.5px;color:var(--ink-2);line-height:1.6;display:block}
-.contact{display:grid;gap:6px;font-size:15px}
-.contact div{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:8px 0;border-top:1px solid var(--line-2)}
-.contact dt{font-family:var(--f-en);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-text);margin:0}
-.contact dd{margin:0;color:var(--ink-2)}
-.contact dd a{text-decoration:none}
-.contact dd a:hover{color:var(--orange-text);text-decoration:underline}
-.contact-wrap{margin:0}
-
-/* footer */
-footer{position:relative;margin-top:80px;padding-block:72px 32px;overflow:hidden;background:var(--bg-2);border-top:1px solid var(--line)}
-footer .spots{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
-footer .wrap{position:relative;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
-footer .big{font-family:var(--f-display);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--ink);font-weight:700;width:100%;text-wrap:balance}
-
-/* gauge */
-.gauge{position:fixed;left:26px;top:50%;transform:translateY(-50%);height:300px;width:44px;display:none;z-index:5;pointer-events:none;font-family:var(--f-en);font-size:11px;color:var(--ink-2)}
-.gauge .rule{position:absolute;left:0;top:0;bottom:0;width:14px;border-left:2px solid var(--line-2);background:repeating-linear-gradient(to bottom,var(--line-2) 0 2px,transparent 2px 27.27px)}
-.gauge .mk{position:absolute;left:0;top:0;display:flex;align-items:center;gap:6px;transform:translateY(-50%);white-space:nowrap;color:var(--orange-text);font-weight:600}
-.gauge .mk::before{content:"";width:18px;height:4px;border-radius:2px;background:var(--orange)}
-.gauge .t,.gauge .b{position:absolute;left:24px}
-.gauge .t{top:-8px}.gauge .b{bottom:-8px}
-@media (min-width:1360px){.gauge{display:block}}
-
-/* modal */
-.modal{position:fixed;inset:0;z-index:60;display:none;background:rgba(28,14,5,.72);padding:16px;overflow:auto}
-.modal.open{display:grid;place-items:center}
-.panel{background:var(--surface);border-radius:20px;width:min(1120px,100%);max-height:calc(100dvh - 32px);overflow:auto;display:grid;grid-template-columns:1fr 300px;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.4)}
-.stage-col{padding:16px;min-width:0}
-.stage{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:var(--stage);position:relative;border:1px solid var(--line)}
-.stage>*{width:100%;height:100%;object-fit:contain;display:block}
-.arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);box-shadow:var(--shadow);font-size:20px;display:grid;place-items:center;z-index:2}
-.arrow.prev{left:10px}.arrow.next{right:10px}
-.thumbs{display:flex;gap:10px;margin-top:12px;overflow-x:auto;padding:4px 2px 8px}
-.thumbs button{flex:none;width:96px;aspect-ratio:4/3;border-radius:8px;overflow:hidden;padding:0;border:2px solid var(--line);background:var(--stage)}
-.thumbs button[aria-current="true"]{border-color:var(--orange)}
-.thumbs button>*{width:100%;height:100%;object-fit:cover;display:block}
-.info{padding:28px 24px 24px 8px;display:flex;flex-direction:column;gap:14px}
-.info h3{font-family:var(--f-display);font-size:24px;line-height:1.3}
-.info .m{font-family:var(--f-en);font-size:13px;letter-spacing:.05em;color:var(--orange-text)}
-.info p{font-size:14.5px;color:var(--ink-2)}
-.info .seg{margin:0;align-self:flex-start;flex-wrap:wrap}
-.info .cnt{font-family:var(--f-en);font-size:13px;color:var(--ink-2)}
-.close{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line-2);background:var(--surface);z-index:3;font-size:18px;line-height:1}
-.close:hover{background:var(--orange-soft)}
-
-/* placeholder art */
-.ph{display:block;width:100%;height:100%}
-.ph text{font-family:var(--f-en)}
-
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr}
-  .giraffe{max-width:300px;order:-1}
-  .jump{grid-template-columns:repeat(2,1fr)}
-  .pitch-grid{grid-template-columns:1fr}
-  .about{grid-template-columns:1fr;gap:32px}
-  .portrait{max-width:320px}
-  .panel{grid-template-columns:1fr}
-  .info{padding:4px 20px 24px}
-}
-@media (max-width:520px){
-  .flow{grid-template-columns:1fr}
-  section.blk{padding-block:56px 16px}
-  .nav a{padding:6px 9px;font-size:13px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .sway{animation:none}
-  *{transition:none!important}
-}
-
-/* hero photo */
-.hero-photo{justify-self:center;width:100%;max-width:540px}
-.hero-photo img{display:block;width:100%;height:auto;
-  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 22%,#000 76%,transparent 100%);
-  -webkit-mask-composite:source-in;
-  mask-image:linear-gradient(to right,transparent 0,#000 26%,#000 74%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 22%,#000 76%,transparent 100%);
-  mask-composite:intersect}
-.pcard .cover{aspect-ratio:16/9}
-.pcard .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.pcard:hover .cover img{transform:scale(1.04)}
-.pcard h3{margin-bottom:0}
-.stage img,.thumbs img{display:block}
-.stage img{width:100%;height:100%;object-fit:contain}
-.thumbs img{object-fit:cover}
-.info .m{margin-bottom:2px}
-#mDesc{display:none}
-/* sims */
-.sim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.simi{padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--stage);display:block}
-.simi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.simi:hover img{transform:scale(1.05)}
-.vid-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.vbox{aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
-.vbox video{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer}
-.art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.art-grid figure{margin:0;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--stage);aspect-ratio:16/9}
-.art-grid img{width:100%;height:100%;object-fit:cover;display:block}
-.art-grid figure:last-child:nth-child(odd){grid-column:1/-1}
-/* drawings */
-.sub{font-family:var(--f-display);font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;margin:8px 0 18px;display:flex;align-items:center;gap:12px}
-.sub::before{content:"";width:14px;height:14px;border-radius:5px;background:var(--orange);transform:rotate(12deg)}
-.stack{display:grid;gap:22px;margin-bottom:48px}
-.fullimg{display:block;position:relative;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--paper);box-shadow:5px 5px 0 var(--orange-soft)}
-.fullimg img{display:block;width:100%;height:auto}
-.pdfbadge{position:absolute;right:14px;bottom:14px;background:var(--orange);color:var(--on-orange);font-family:var(--f-en);font-weight:600;font-size:14px;padding:6px 16px;border-radius:999px;transition:transform .2s}
-a.fullimg:hover .pdfbadge{transform:translateY(-2px)}
-@media (max-width:860px){.hero-photo{max-width:420px;order:-1}.sim-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.vid-grid,.art-grid{grid-template-columns:1fr}.sim-grid{gap:10px}}
-
-/* hero: 大幅底圖 + 漸層淡出 */
-.hero{position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:2}
-.hero-grid{grid-template-columns:1fr}
-.hero-grid>div{max-width:620px}
-.hero-photo{position:absolute;z-index:0;top:8px;right:calc(50% - 680px);width:750px;max-width:none;pointer-events:none}
-.hero-photo img{display:block;width:100%;height:auto;max-width:none;
-  -webkit-mask-image:linear-gradient(to right,transparent 0,transparent 8%,#000 48%,#000 100%),linear-gradient(to left,transparent 0,#000 14%),linear-gradient(to bottom,transparent 0,#000 10%,#000 78%,transparent 100%);
-  -webkit-mask-composite:source-in,source-in;
-  mask-image:linear-gradient(to right,transparent 0,transparent 8%,#000 48%,#000 100%),linear-gradient(to left,transparent 0,#000 14%),linear-gradient(to bottom,transparent 0,#000 10%,#000 78%,transparent 100%);
-  mask-composite:intersect,intersect}
-.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,var(--bg) 0,transparent 26%)}
-@media (max-width:860px){
-  .hero{padding-top:0}
-  .hero-photo{position:relative;top:0;right:auto;width:80%;margin:0 auto -30px}
-  .hero-photo img{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 70%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0,#000 12%,#000 70%,transparent 100%)}
-  .hero::after{display:none}
-}
-/* 個人照片 */
-.portrait{background:var(--orange-soft)}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;mix-blend-mode:var(--blend)}
-/* 施工圖檢視 */
-button.fullimg{padding:0;width:100%;text-align:left;cursor:pointer}
-.panel.wide{grid-template-columns:1fr;width:min(1400px,100%)}
-.panel.wide .stage{aspect-ratio:auto;height:calc(100dvh - 250px);min-height:280px}
-.panel.wide .info{padding:0 20px 20px;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px}
-.panel.wide .info h3{font-size:20px}
-.panel.wide .thumbs button{width:110px}
-#mArt.zoomed{overflow:auto}
-.panel.wide #mArt img{cursor:zoom-in}
-#mArt.zoomed img{width:230%;height:auto;max-width:none;object-fit:initial;cursor:zoom-out}
-@media (max-width:520px){.hero p.lead br{display:none}}
-
-.sub-eyebrow{margin-bottom:14px}
-.about .pull{font-family:var(--f-display);font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.6;color:var(--ink);font-weight:500;margin-block:6px}
-.about .intro{margin-bottom:36px}
-.exp{padding-top:36px;border-top:2px solid var(--ink);margin-bottom:40px}
-.exp h3{font-size:clamp(1.4rem,3vw,1.8rem);margin-bottom:4px}
-.exp .when{font-size:14.5px;color:var(--orange-text);font-weight:500;letter-spacing:.03em;margin-bottom:18px}
-.exp .intro{margin-bottom:0}
-.about .portrait{position:sticky;top:96px}
-@media (max-width:860px){.about .portrait{position:relative;top:0}}
+<meta name="description" content="Dooooo｜3D Design / Spatial Artist 展場設計作品集">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='10'%20fill='%23F08A24'/%3E%3Crect%20x='7'%20y='10'%20width='18'%20height='16'%20rx='8'%20fill='%23FFE6C6'/%3E%3Ccircle%20cx='12.5'%20cy='17'%20r='1.4'%20fill='%232A1B12'/%3E%3Ccircle%20cx='19.5'%20cy='17'%20r='1.4'%20fill='%232A1B12'/%3E%3Cpath%20d='M12%2010%2011%205M20%2010l1-5'%20stroke='%232A1B12'%20stroke-width='2'%20stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Dooooo – 3D Design / Spatial Artist 展場設計作品集</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
 </style>
 
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="dooooo-fonts-css" href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@500;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Outfit:wght@400;500;600&amp;display=swap" media="all">
+<link rel="stylesheet" id="dooooo-style-css" href="/3D-/wp-content/themes/dooooo-portfolio/style.css?ver=1.0" media="all">
 </head>
-<body>
+<body class="home blog wp-theme-dooooo-portfolio">
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Dooooo 首頁">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="var(--orange)"/><g stroke="var(--dk)" stroke-width="2" stroke-linecap="round"><path d="M12 10 11 5M20 10l1-5"/></g><circle cx="11" cy="4.6" r="1.7" fill="var(--dk)"/><circle cx="21" cy="4.6" r="1.7" fill="var(--dk)"/><rect x="7" y="10" width="18" height="16" rx="8" fill="#FFE6C6"/><circle cx="12.5" cy="17" r="1.4" fill="var(--dk)"/><circle cx="19.5" cy="17" r="1.4" fill="var(--dk)"/><ellipse cx="16" cy="22" rx="4.5" ry="3" fill="#F5A54A"/><rect x="9" y="12" width="3.2" height="3.2" rx="1.2" fill="#C96A1C"/><rect x="20.5" y="12.5" width="2.8" height="2.8" rx="1.1" fill="#C96A1C"/></svg>
-      Dooooo
-    </a>
+    <a class="brand" href="/3D-/" aria-label="Dooooo 首頁">
+      <svg viewbox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="var(--orange)"></rect><g stroke="var(--dk)" stroke-width="2" stroke-linecap="round"><path d="M12 10 11 5M20 10l1-5"></path></g><circle cx="11" cy="4.6" r="1.7" fill="var(--dk)"></circle><circle cx="21" cy="4.6" r="1.7" fill="var(--dk)"></circle><rect x="7" y="10" width="18" height="16" rx="8" fill="#FFE6C6"></rect><circle cx="12.5" cy="17" r="1.4" fill="var(--dk)"></circle><circle cx="19.5" cy="17" r="1.4" fill="var(--dk)"></circle><ellipse cx="16" cy="22" rx="4.5" ry="3" fill="#F5A54A"></ellipse><rect x="9" y="12" width="3.2" height="3.2" rx="1.2" fill="#C96A1C"></rect><rect x="20.5" y="12.5" width="2.8" height="2.8" rx="1.1" fill="#C96A1C"></rect></svg>
+      Dooooo    </a>
     <nav class="nav" aria-label="主選單">
       <a href="#pitch">比稿獲選</a>
       <a href="#sim">提案模擬</a>
@@ -311,131 +43,191 @@ button.fullimg{padding:0;width:100%;text-align:left;cursor:pointer}
 </aside>
 
 <main id="top">
-  <section class="hero">
-    <div class="hero-photo" aria-hidden="true"><img src="img/hero.webp" alt="" width="1254" height="1080"></div>
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow"><i></i>3D Exhibition Designer</span>
-          <h1>3D Design<br><em>Spatial Artist</em></h1>
-          <p class="lead">我是 Dooooo，專注於展覽空間與 3D 視覺設計，<br>習慣從一個概念開始，逐步發展成空間、造型、視覺與完整場景。<br>比起單純追求好看的畫面，<br>我更在意如何把抽象的主題轉化成能被理解、被看見，也能留下記憶的空間。</p>
-          <div class="cta">
-            <a class="btn pri" href="#pitch">看比稿獲選作品</a>
-            <a class="btn ghost" href="#about">關於我</a>
-          </div>
-        </div>
-        
-      </div>
-      <nav class="jump" aria-label="作品分類">
-        <a href="#pitch"><b>比稿獲選</b><span>實景與 3D 模擬對照</span></a>
-        <a href="#sim"><b>提案模擬</b><span>多角度 3D 模擬圖</span></a>
-        <a href="#dwg"><b>施工圖・美工單</b><span>製作片段節錄</span></a>
-        <a href="#about"><b>關於我</b><span>經歷與擅長軟體</span></a>
-      </nav>
-    </div>
-  </section>
-
-  <section class="blk" id="pitch">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow"><i></i>Pitch Winners</span>
-        <h2>比稿獲選作品</h2>
-        <p>從眾多提案中被選中的攤位。點開可看完整 3D 模擬圖，有實景照的案子可以切換對照設計與現場。</p>
-      </div>
-      <div class="pitch-grid" id="pitchGrid"></div>
-    </div>
-  </section>
-
-  <section class="blk" id="sim">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow"><i></i>Proposal Renders</span>
-        <h2>提案模擬圖</h2>
-        <p>提案階段的 3D 模擬圖、動態效果，以及裝置藝術構想。</p>
-      </div>
-      <div class="seg" role="tablist" aria-label="提案模擬分類" id="simTabs">
-        <button role="tab" aria-selected="true" data-p="sim">3D 模擬圖</button>
-        <button role="tab" aria-selected="false" data-p="vid">動態效果</button>
-        <button role="tab" aria-selected="false" data-p="art">其他裝置藝術</button>
-      </div>
-      <div id="panel-sim"><div class="sim-grid" id="simGrid"></div></div>
-      <div id="panel-vid" hidden><div class="vid-grid" id="vidGrid"></div></div>
-      <div id="panel-art" hidden><div class="art-grid" id="artGrid"></div></div>
-    </div>
-  </section>
-
-  <section class="blk" id="dwg">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow"><i></i>Shop Drawings &amp; Art Orders</span>
-        <h2>施工圖與美工單</h2>
-      </div>
-      <h3 class="sub">施工圖</h3>
-      <div class="stack" id="pdfStack"></div>
-      <h3 class="sub">美工單</h3>
-      <div class="stack" id="woStack"></div>
-    </div>
-  </section>
-
-  <section class="blk" id="about">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow"><i></i>About Me</span>
-        <h2>關於我</h2>
-      </div>
-      <div class="about">
-        <div class="portrait"><img src="img/portrait.webp" alt="Dooooo 的個人照片" width="900" height="1125"></div>
-        <div>
-          <div class="intro">
-            <p>畢業於致理科技大學多媒體設計系，是一隻喜歡畫 3D 的長頸鹿，目標有一天能俯視台北 101。</p>
-            <p>除了 3D 建模與空間設計之外，我也喜歡接觸動畫、影片剪輯、簡單互動遊戲與網頁 UI 設計。對我來說，不同媒介都是把腦中的想法變成畫面的方式，也因此總是很享受嘗試新的工具與表現形式。</p>
-            <p class="pull">現在的我，算是剛從「展場小白」畢業。<br>我的人生宗旨是——天天開心。</p>
-            <p>即使偶爾被案子壓得緊緊的，只要遇到自己喜歡的東西，還是會忍不住一路畫下去。</p>
-            <p>希望在持續累積經驗與作品的過程中，把喜歡的事情做得越來越好，朝成為一名專業的 3D Designer 前進。</p>
-          </div>
-          <div class="exp">
-            <span class="eyebrow sub-eyebrow"><i></i>Experience</span>
-            <h3>元墉設計｜展場設計</h3>
-            <p class="when">實習 1 年｜轉正後任職至今 4 個月</p>
-            <div class="intro">
-              <p>在元墉設計的實習與工作期間，從零開始接觸展覽設計，也逐漸建立對展場設計與實際施工的理解。</p>
-              <p>工作中接觸並學習各類展場結構與材料應用，包括木作、TRUSS、組合式結構，以及 PVC、合成板等輸出與製作方式。除了畫面上的設計，也開始理解一個設計如何從 3D 圖面真正落地成為實體空間。</p>
-              <p>實習期間透過大量比稿與實際專案累積經驗，從前期了解客戶需求、規劃空間與參觀動線，到造型發想、細節設計、3D 視覺呈現，再一路參與至現場搭建與正式展出。</p>
-              <p class="pull">對我來說，展場設計最有成就感的時刻，是原本只存在電腦裡的畫面真正被搭建出來。</p>
-              <p>看著設計從一張圖、一個模型，最後變成能讓人實際走進去的空間；也看到客戶順利完成一場展覽，這份「把想法變成現實」的過程，是我很喜歡展場設計的原因之一。</p>
-            </div>
-          </div>
-          <h3>擅長使用軟體</h3>
-          <ul class="tags">
-            <li>Blender</li>
-            <li>Illustrator</li>
-            <li>AutoCAD</li>
-          </ul>
-          <h3>聯絡方式</h3>
-          <dl class="contact contact-wrap">
-            <div><dt>Email</dt><dd><a href="mailto:dodohe13579@gmail.com">dodohe13579@gmail.com</a></dd></div>
-            <div><dt>Phone</dt><dd><a href="tel:0908539969">0908 539 969</a></dd></div>
-          </dl>
+<section class="hero">
+  <div class="hero-photo" aria-hidden="true"><img src="/3D-/wp-content/uploads/2026/10/hero.webp" alt=""></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>3D Exhibition Designer</span>
+        <h1>3D Design<br><em>Spatial Artist</em></h1>
+        <p class="lead">我是 Dooooo，專注於展覽空間與 3D 視覺設計，<br>
+習慣從一個概念開始，逐步發展成空間、造型、視覺與完整場景。<br>
+比起單純追求好看的畫面，<br>
+我更在意如何把抽象的主題轉化成能被理解、被看見，也能留下記憶的空間。</p>
+        <div class="cta">
+          <a class="btn pri" href="#pitch">看比稿獲選作品</a>
+          <a class="btn ghost" href="#about">關於我</a>
         </div>
       </div>
     </div>
-  </section>
+    <nav class="jump" aria-label="作品分類">
+      <a href="#pitch"><b>比稿獲選</b><span>實景與 3D 模擬對照</span></a>
+      <a href="#sim"><b>提案模擬</b><span>多角度 3D 模擬圖</span></a>
+      <a href="#dwg"><b>施工圖・美工單</b><span>製作片段節錄</span></a>
+      <a href="#about"><b>關於我</b><span>經歷與擅長軟體</span></a>
+    </nav>
+  </div>
+</section>
+
+<section class="blk" id="pitch">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><i></i>Pitch Winners</span>
+      <h2>比稿獲選作品</h2>
+      <p>從眾多提案中被選中的攤位。點開可看完整 3D 模擬圖，有實景照的案子可以切換對照設計與現場。</p>
+    </div>
+    <div class="pitch-grid" id="pitchGrid">
+            <button class="pcard" data-i="0" aria-label="查看 2026 生技展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p1-r1-1024x576.webp" alt="2026 生技展" loading="lazy"><span class="hint">實景 × 3D 對照</span></div>
+        <h3>2026 生技展</h3>
+      </button>
+            <button class="pcard" data-i="1" aria-label="查看 2026 半導體展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p2-r1-1024x576.webp" alt="2026 半導體展" loading="lazy"><span class="hint">實景 × 3D 對照</span></div>
+        <h3>2026 半導體展</h3>
+      </button>
+            <button class="pcard" data-i="2" aria-label="查看 2025 醫療科技展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p3-r1-1024x576.webp" alt="2025 醫療科技展" loading="lazy"><span class="hint">實景 × 3D 對照</span></div>
+        <h3>2025 醫療科技展</h3>
+      </button>
+            <button class="pcard" data-i="3" aria-label="查看 2025 生技展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p4-r1-1024x576.webp" alt="2025 生技展" loading="lazy"><span class="hint">實景 × 3D 對照</span></div>
+        <h3>2025 生技展</h3>
+      </button>
+            <button class="pcard" data-i="4" aria-label="查看 2025 高齡展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p5-r1-1024x576.webp" alt="2025 高齡展" loading="lazy"><span class="hint">實景 × 3D 對照</span></div>
+        <h3>2025 高齡展</h3>
+      </button>
+            <button class="pcard" data-i="5" aria-label="查看 2026 環保科技展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p6-r1-1024x683.webp" alt="2026 環保科技展" loading="lazy"><span class="hint">3D 模擬圖</span></div>
+        <h3>2026 環保科技展</h3>
+      </button>
+            <button class="pcard" data-i="6" aria-label="查看 2026 電路板展">
+        <div class="cover"><span class="badge">比稿獲選</span><img src="/3D-/wp-content/uploads/2026/10/p7-r1-1024x576.webp" alt="2026 電路板展" loading="lazy"><span class="hint">3D 模擬圖</span></div>
+        <h3>2026 電路板展</h3>
+      </button>
+          </div>
+  </div>
+</section>
+
+<section class="blk" id="sim">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><i></i>Proposal Renders</span>
+      <h2>提案模擬圖</h2>
+      <p>提案階段的 3D 模擬圖、動態效果，以及裝置藝術構想。</p>
+    </div>
+    <div class="seg" role="tablist" aria-label="提案模擬分類" id="simTabs">
+      <button role="tab" aria-selected="true" data-p="sim">3D 模擬圖</button>
+      <button role="tab" aria-selected="false" data-p="vid">動態效果</button>
+      <button role="tab" aria-selected="false" data-p="art">其他裝置藝術</button>
+    </div>
+    <div id="panel-sim"><div class="sim-grid" id="simGrid">
+            <button class="simi" data-i="0" aria-label="放大查看第 1 張"><img src="/3D-/wp-content/uploads/2026/10/sim1-768x432.webp" alt="提案模擬圖 1" loading="lazy"></button>
+            <button class="simi" data-i="1" aria-label="放大查看第 2 張"><img src="/3D-/wp-content/uploads/2026/10/sim2-768x432.webp" alt="提案模擬圖 2" loading="lazy"></button>
+            <button class="simi" data-i="2" aria-label="放大查看第 3 張"><img src="/3D-/wp-content/uploads/2026/10/sim3-768x432.webp" alt="提案模擬圖 3" loading="lazy"></button>
+            <button class="simi" data-i="3" aria-label="放大查看第 4 張"><img src="/3D-/wp-content/uploads/2026/10/sim4-768x432.webp" alt="提案模擬圖 4" loading="lazy"></button>
+            <button class="simi" data-i="4" aria-label="放大查看第 5 張"><img src="/3D-/wp-content/uploads/2026/10/sim5-768x432.webp" alt="提案模擬圖 5" loading="lazy"></button>
+            <button class="simi" data-i="5" aria-label="放大查看第 6 張"><img src="/3D-/wp-content/uploads/2026/10/sim6-768x432.webp" alt="提案模擬圖 6" loading="lazy"></button>
+            <button class="simi" data-i="6" aria-label="放大查看第 7 張"><img src="/3D-/wp-content/uploads/2026/10/sim7-768x432.webp" alt="提案模擬圖 7" loading="lazy"></button>
+            <button class="simi" data-i="7" aria-label="放大查看第 8 張"><img src="/3D-/wp-content/uploads/2026/10/sim8-768x432.webp" alt="提案模擬圖 8" loading="lazy"></button>
+            <button class="simi" data-i="8" aria-label="放大查看第 9 張"><img src="/3D-/wp-content/uploads/2026/10/sim9-768x512.webp" alt="提案模擬圖 9" loading="lazy"></button>
+          </div></div>
+    <div id="panel-vid" hidden><div class="vid-grid" id="vidGrid">
+            <div class="vbox"><video src="/3D-/wp-content/uploads/2026/10/v1.mp4" muted loop playsinline preload="metadata" aria-label="動態效果 1"></video></div>
+            <div class="vbox"><video src="/3D-/wp-content/uploads/2026/10/v2.mp4" muted loop playsinline preload="metadata" aria-label="動態效果 2"></video></div>
+            <div class="vbox"><video src="/3D-/wp-content/uploads/2026/10/v3.mp4" muted loop playsinline preload="metadata" aria-label="動態效果 3"></video></div>
+            <div class="vbox"><video src="/3D-/wp-content/uploads/2026/10/v4.mp4" muted loop playsinline preload="metadata" aria-label="動態效果 4"></video></div>
+            <div class="vbox"><video src="/3D-/wp-content/uploads/2026/10/v5.mp4" muted loop playsinline preload="metadata" aria-label="動態效果 5"></video></div>
+          </div></div>
+    <div id="panel-art" hidden><div class="art-grid" id="artGrid">
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art1-1024x576.webp" alt="裝置藝術 1" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art2-1024x576.webp" alt="裝置藝術 2" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art3-1024x576.webp" alt="裝置藝術 3" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art4-1024x576.webp" alt="裝置藝術 4" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art5-1024x576.webp" alt="裝置藝術 5" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art6-1024x576.webp" alt="裝置藝術 6" loading="lazy"></figure>
+            <figure><img src="/3D-/wp-content/uploads/2026/10/art7-1024x576.webp" alt="裝置藝術 7" loading="lazy"></figure>
+          </div></div>
+  </div>
+</section>
+
+<section class="blk" id="dwg">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><i></i>Shop Drawings &amp; Art Orders</span>
+      <h2>施工圖與美工單</h2>
+    </div>
+    <h3 class="sub">施工圖</h3>
+    <div class="stack" id="pdfStack">
+            <button class="fullimg pdf" data-d="0" aria-label="查看「施工圖 1」的全部圖面"><img src="/3D-/wp-content/uploads/2026/10/dwg1-prev.webp" alt="施工圖 1 預覽" loading="lazy"><span class="pdfbadge">查看全部 6 頁 ↗</span></button>
+            <button class="fullimg pdf" data-d="1" aria-label="查看「施工圖 2」的全部圖面"><img src="/3D-/wp-content/uploads/2026/10/dwg2-prev.webp" alt="施工圖 2 預覽" loading="lazy"><span class="pdfbadge">查看全部 18 頁 ↗</span></button>
+            <button class="fullimg pdf" data-d="2" aria-label="查看「施工圖 3」的全部圖面"><img src="/3D-/wp-content/uploads/2026/10/dwg3-prev.webp" alt="施工圖 3 預覽" loading="lazy"><span class="pdfbadge">查看全部 14 頁 ↗</span></button>
+          </div>
+    <h3 class="sub">美工單</h3>
+    <div class="stack" id="woStack">
+            <div class="fullimg"><img src="/3D-/wp-content/uploads/2026/10/wo15.webp" alt="美工單 1" loading="lazy"></div>
+            <div class="fullimg"><img src="/3D-/wp-content/uploads/2026/10/wo16.webp" alt="美工單 2" loading="lazy"></div>
+          </div>
+  </div>
+</section>
+
+<section class="blk" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><i></i>About Me</span>
+      <h2>關於我</h2>
+    </div>
+    <div class="about">
+      <div class="portrait"><img src="/3D-/wp-content/uploads/2026/10/portrait.webp" alt="Dooooo 的個人照片"></div>
+      <div>
+        <div class="intro"><p>畢業於致理科技大學多媒體設計系，是一隻喜歡畫 3D 的長頸鹿，目標有一天能俯視台北 101。</p>
+<p>除了 3D 建模與空間設計之外，我也喜歡接觸動畫、影片剪輯、簡單互動遊戲與網頁 UI 設計。對我來說，不同媒介都是把腦中的想法變成畫面的方式，也因此總是很享受嘗試新的工具與表現形式。</p>
+<p class="pull">現在的我，算是剛從「展場小白」畢業。<br>
+我的人生宗旨是——天天開心。</p>
+<p>即使偶爾被案子壓得緊緊的，只要遇到自己喜歡的東西，還是會忍不住一路畫下去。</p>
+<p>希望在持續累積經驗與作品的過程中，把喜歡的事情做得越來越好，朝成為一名專業的 3D Designer 前進。</p>
+</div>
+        <div class="exp">
+          <span class="eyebrow sub-eyebrow"><i></i>Experience</span>
+          <h3>元墉設計｜展場設計</h3>
+          <p class="when">實習 1 年｜轉正後任職至今 4 個月</p>
+          <div class="intro"><p>在元墉設計的實習與工作期間，從零開始接觸展覽設計，也逐漸建立對展場設計與實際施工的理解。</p>
+<p>工作中接觸並學習各類展場結構與材料應用，包括木作、TRUSS、組合式結構，以及 PVC、合成板等輸出與製作方式。除了畫面上的設計，也開始理解一個設計如何從 3D 圖面真正落地成為實體空間。</p>
+<p>實習期間透過大量比稿與實際專案累積經驗，從前期了解客戶需求、規劃空間與參觀動線，到造型發想、細節設計、3D 視覺呈現，再一路參與至現場搭建與正式展出。</p>
+<p class="pull">對我來說，展場設計最有成就感的時刻，是原本只存在電腦裡的畫面真正被搭建出來。</p>
+<p>看著設計從一張圖、一個模型，最後變成能讓人實際走進去的空間；也看到客戶順利完成一場展覽，這份「把想法變成現實」的過程，是我很喜歡展場設計的原因之一。</p>
+</div>
+        </div>
+        <h3>擅長使用軟體</h3>
+        <ul class="tags">
+                    <li>Blender</li>
+                    <li>Illustrator</li>
+                    <li>AutoCAD</li>
+                  </ul>
+        <h3>聯絡方式</h3>
+        <dl class="contact contact-wrap">
+                    <div><dt>Email</dt><dd><a href="mailto:dodohe13579@gmail.com">dodohe13579@gmail.com</a></dd></div>          <div><dt>Phone</dt><dd><a href="tel:0908539969">0908 539 969</a></dd></div>        </dl>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
-  <svg class="spots" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
-    <defs><pattern id="gsp" width="180" height="150" patternUnits="userSpaceOnUse">
+  <svg class="spots" aria-hidden="true" preserveaspectratio="xMidYMid slice">
+    <defs><pattern id="gsp" width="180" height="150" patternunits="userSpaceOnUse">
       <g fill="var(--orange-soft)" stroke="var(--orange-soft)" stroke-width="12" stroke-linejoin="round">
-        <polygon points="20,20 60,14 72,46 40,64 14,48"/>
-        <polygon points="110,10 150,22 146,58 112,60 100,34"/>
-        <polygon points="70,92 108,84 124,116 92,140 62,120"/>
-        <polygon points="150,96 176,104 172,136 148,132"/>
-        <polygon points="6,100 34,92 44,122 18,138"/>
+        <polygon points="20,20 60,14 72,46 40,64 14,48"></polygon>
+        <polygon points="110,10 150,22 146,58 112,60 100,34"></polygon>
+        <polygon points="70,92 108,84 124,116 92,140 62,120"></polygon>
+        <polygon points="150,96 176,104 172,136 148,132"></polygon>
+        <polygon points="6,100 34,92 44,122 18,138"></polygon>
       </g></pattern></defs>
-    <rect width="100%" height="100%" fill="url(#gsp)"/>
+    <rect width="100%" height="100%" fill="url(#gsp)"></rect>
   </svg>
   <div class="wrap">
-    <p class="big">一隻喜歡畫 3D 的長頸鹿，<br>目標有一天能俯視台北 101。</p>
+    <p class="big">一隻喜歡畫 3D 的長頸鹿，<br>
+目標有一天能俯視台北 101。</p>
     <span class="en">© 2026 Dooooo · 3D Exhibition Designer</span>
     <span>Taiwan</span>
   </div>
@@ -461,116 +253,10 @@ button.fullimg{padding:0;width:100%;text-align:left;cursor:pointer}
   </div>
 </div>
 
-<script>
-const $=id=>document.getElementById(id);
-const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-/* ============ 內容資料 ============ */
-const PITCH_SRC=[
-  {title:'2026 生技展',       r:['p1-r1'], s:['p1-s1']},
-  {title:'2026 半導體展',     r:['p2-r1'], s:['p2-s1']},
-  {title:'2025 醫療科技展',   r:['p3-r1'], s:['p3-s1']},
-  {title:'2025 生技展',       r:['p4-r1'], s:['p4-s1']},
-  {title:'2025 高齡展',       r:['p5-r1'], s:['p5-s1']},
-  {title:'2026 環保科技展',   r:['p6-r1','p6-r2'], s:[]},
-  {title:'2026 電路板展',     r:['p7-r1','p7-r2','p7-r3','p7-r4'], s:[]}
-];
-const im=(k,cap)=>({src:'img/'+k+'.webp',cap});
-const PITCHES=PITCH_SRC.map(p=>({
-  title:p.title, meta:'比稿獲選', hasPhoto:p.s.length>0, cover:'img/'+p.r[0]+'.webp',
-  groups:[
-    ...(p.s.length?[{label:'攤位實景',imgs:p.s.map(k=>im(k,p.title+' 攤位實景'))}]:[]),
-    {label:'3D 模擬圖',imgs:p.r.map(k=>im(k,p.title+' 3D 模擬圖'))}
-  ]
-}));
-const SIMS=Array.from({length:9},(_,i)=>im('sim'+(i+1),'提案模擬圖 '+(i+1)));
-const VIDS=[1,2,3,4,5].map(n=>'vid/v'+n+'.mp4');
-const ARTS=Array.from({length:7},(_,i)=>im('art'+(i+1),'裝置藝術模擬提案 '+(i+1)));
-const PAGES=[6,18,14];
-const PDFS=PAGES.map((c,k)=>({src:'img/dwg'+(k+1)+'-prev.webp',imgs:Array.from({length:c},(_,i)=>({src:'img/dwg'+(k+1)+'-'+(i+1)+'.webp',cap:'施工圖 '+(k+1)+' 第 '+(i+1)+' 頁'}))}));
-const WORK=[15,16].map(n=>'img/wo'+n+'.webp');
-
-/* ============ 渲染 ============ */
-$('pitchGrid').innerHTML=PITCHES.map((p,i)=>`
-  <button class="pcard" data-i="${i}" aria-label="查看 ${esc(p.title)}">
-    <div class="cover"><span class="badge">比稿獲選</span><img src="${p.cover}" alt="${esc(p.title)}" loading="lazy"><span class="hint">${p.hasPhoto?'實景 × 3D 對照':'3D 模擬圖'}</span></div>
-    <h3>${esc(p.title)}</h3>
-  </button>`).join('');
-
-$('simGrid').innerHTML=SIMS.map((s,i)=>`<button class="simi" data-i="${i}" aria-label="放大查看第 ${i+1} 張"><img src="${s.src}" alt="${esc(s.cap)}" loading="lazy"></button>`).join('');
-$('vidGrid').innerHTML=VIDS.map((v,i)=>`<div class="vbox"><video src="${v}" muted loop playsinline preload="metadata" aria-label="動態效果 ${i+1}"></video></div>`).join('');
-$('artGrid').innerHTML=ARTS.map(a=>`<figure><img src="${a.src}" alt="${esc(a.cap)}" loading="lazy"></figure>`).join('');
-$('pdfStack').innerHTML=PDFS.map((d,i)=>`<button class="fullimg pdf" data-d="${i}" aria-label="查看第 ${i+1} 份施工圖的全部圖面"><img src="${d.src}" alt="施工圖預覽 ${i+1}" loading="lazy"><span class="pdfbadge">查看全部 ${d.imgs.length} 頁 ↗</span></button>`).join('');
-$('woStack').innerHTML=WORK.map((w,i)=>`<div class="fullimg"><img src="${w}" alt="美工單 ${i+1}" loading="lazy"></div>`).join('');
-
-/* 提案模擬：分頁籤 */
-const vids=[...document.querySelectorAll('#vidGrid video')];
-function pauseAll(){vids.forEach(v=>v.pause());}
-document.getElementById('simTabs').addEventListener('click',e=>{
-  const b=e.target.closest('button'); if(!b) return;
-  document.querySelectorAll('#simTabs button').forEach(x=>x.setAttribute('aria-selected',x===b?'true':'false'));
-  ['sim','vid','art'].forEach(k=>{$('panel-'+k).hidden=(k!==b.dataset.p);});
-  if(b.dataset.p!=='vid') pauseAll();
-});
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  const v=e.target;
-  if(e.isIntersecting&&!$('panel-vid').hidden){v.muted=true;const p=v.play();if(p&&p.catch)p.catch(()=>{});} else v.pause();
-}),{threshold:.35});
-vids.forEach(v=>{v.muted=true;io.observe(v);v.addEventListener('click',()=>{v.paused?v.play().catch(()=>{}):v.pause();});});
-
-/* ============ 燈箱 ============ */
-const modal=$('modal'), st={item:null,g:0,i:0,opener:null};
-function paint(){
-  $('panel').classList.toggle('wide',!!st.item.wide); $('mArt').classList.remove('zoomed');
-  const {item,g,i}=st, grp=item.groups[g], img=grp.imgs[i];
-  $('mArt').innerHTML=`<img src="${esc(img.src)}" alt="${esc(img.cap)}">`;
-  $('mTitle').textContent=item.title; $('mMeta').textContent=item.meta;
-  $('mCnt').textContent=grp.label+'　'+(i+1)+' / '+grp.imgs.length;
-  const tabs=$('mTabs'); tabs.hidden=item.groups.length<2;
-  tabs.innerHTML=item.groups.map((x,k)=>`<button role="tab" data-g="${k}" aria-selected="${k===g}">${esc(x.label)}</button>`).join('');
-  const multi=grp.imgs.length>1;
-  $('mThumbs').hidden=!multi; $('mPrev').hidden=!multi; $('mNext').hidden=!multi;
-  $('mThumbs').innerHTML=grp.imgs.map((x,k)=>`<button data-k="${k}" aria-label="第 ${k+1} 張" ${k===i?'aria-current="true"':''}><img src="${esc(x.src)}" alt=""></button>`).join('');
-}
-function openM(item,start,opener){
-  st.item=item; st.g=item.groups.length-1>0&&item.startGroup!=null?item.startGroup:0; st.i=start||0; st.opener=opener;
-  paint(); modal.classList.add('open'); document.body.style.overflow='hidden'; $('mClose').focus();
-}
-function closeM(){ modal.classList.remove('open'); document.body.style.overflow=''; if(st.opener) st.opener.focus(); }
-function step(d){ const n=st.item.groups[st.g].imgs.length; st.i=(st.i+d+n)%n; paint(); }
-
-$('pitchGrid').addEventListener('click',e=>{const b=e.target.closest('[data-i]'); if(b) openM(PITCHES[+b.dataset.i],0,b);});
-$('simGrid').addEventListener('click',e=>{const b=e.target.closest('[data-i]'); if(b) openM({title:'提案模擬圖',meta:'3D 模擬圖',groups:[{label:'3D 模擬圖',imgs:SIMS}]},+b.dataset.i,b);});
-$('pdfStack').addEventListener('click',e=>{const b=e.target.closest('[data-d]'); if(b) openM({title:'施工圖',meta:'點一下圖面可放大檢視',wide:true,groups:[{label:'施工圖',imgs:PDFS[+b.dataset.d].imgs}]},0,b);});
-$('mArt').addEventListener('click',e=>{ if(st.item&&st.item.wide&&e.target.tagName==='IMG') $('mArt').classList.toggle('zoomed'); });
-$('mClose').onclick=closeM;
-modal.addEventListener('click',e=>{ if(e.target===modal) closeM(); });
-$('mPrev').onclick=()=>step(-1); $('mNext').onclick=()=>step(1);
-$('mTabs').addEventListener('click',e=>{const b=e.target.closest('[data-g]'); if(!b) return; st.g=+b.dataset.g; st.i=0; paint();});
-$('mThumbs').addEventListener('click',e=>{const b=e.target.closest('[data-k]'); if(!b) return; st.i=+b.dataset.k; paint();});
-document.addEventListener('keydown',e=>{
-  if(!modal.classList.contains('open')) return;
-  if(e.key==='Escape') closeM();
-  else if(e.key==='ArrowLeft') step(-1);
-  else if(e.key==='ArrowRight') step(1);
-  else if(e.key==='Tab'){
-    const f=[...$('panel').querySelectorAll('button:not([hidden])')].filter(x=>x.offsetParent!==null);
-    if(!f.length) return;
-    const first=f[0], last=f[f.length-1];
-    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
-    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
-  }
-});
-
-/* ============ 高度尺 ============ */
-const gmk=$('gmk'), gval=$('gval');
-function gauge(){
-  const max=document.documentElement.scrollHeight-window.innerHeight;
-  const p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
-  gmk.style.top=(p*300)+'px'; gval.textContent=(5.5*(1-p)).toFixed(1)+' m';
-}
-window.addEventListener('scroll',gauge,{passive:true}); window.addEventListener('resize',gauge); gauge();
+<script>window.DOOOOO_DATA = {"pitches":[{"title":"2026 \u751f\u6280\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"\u6524\u4f4d\u5be6\u666f","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p1-s1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p1-s1-768x576.webp","cap":"2026 \u751f\u6280\u5c55 \u6524\u4f4d\u5be6\u666f"}]},{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p1-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p1-r1-768x432.webp","cap":"2026 \u751f\u6280\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2026 \u534a\u5c0e\u9ad4\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"\u6524\u4f4d\u5be6\u666f","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p2-s1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p2-s1-768x576.webp","cap":"2026 \u534a\u5c0e\u9ad4\u5c55 \u6524\u4f4d\u5be6\u666f"}]},{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p2-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p2-r1-768x432.webp","cap":"2026 \u534a\u5c0e\u9ad4\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2025 \u91ab\u7642\u79d1\u6280\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"\u6524\u4f4d\u5be6\u666f","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p3-s1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p3-s1-768x448.webp","cap":"2025 \u91ab\u7642\u79d1\u6280\u5c55 \u6524\u4f4d\u5be6\u666f"}]},{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p3-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p3-r1-768x432.webp","cap":"2025 \u91ab\u7642\u79d1\u6280\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2025 \u751f\u6280\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"\u6524\u4f4d\u5be6\u666f","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p4-s1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p4-s1-768x432.webp","cap":"2025 \u751f\u6280\u5c55 \u6524\u4f4d\u5be6\u666f"}]},{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p4-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p4-r1-768x432.webp","cap":"2025 \u751f\u6280\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2025 \u9ad8\u9f61\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"\u6524\u4f4d\u5be6\u666f","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p5-s1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p5-s1-768x644.webp","cap":"2025 \u9ad8\u9f61\u5c55 \u6524\u4f4d\u5be6\u666f"}]},{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p5-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p5-r1-768x432.webp","cap":"2025 \u9ad8\u9f61\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2026 \u74b0\u4fdd\u79d1\u6280\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p6-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p6-r1-768x512.webp","cap":"2026 \u74b0\u4fdd\u79d1\u6280\u5c55 3D \u6a21\u64ec\u5716"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p6-r2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p6-r2-768x512.webp","cap":"2026 \u74b0\u4fdd\u79d1\u6280\u5c55 3D \u6a21\u64ec\u5716"}]}]},{"title":"2026 \u96fb\u8def\u677f\u5c55","meta":"\u6bd4\u7a3f\u7372\u9078","groups":[{"label":"3D \u6a21\u64ec\u5716","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r1-768x432.webp","cap":"2026 \u96fb\u8def\u677f\u5c55 3D \u6a21\u64ec\u5716"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r2-768x432.webp","cap":"2026 \u96fb\u8def\u677f\u5c55 3D \u6a21\u64ec\u5716"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r3.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r3-768x432.webp","cap":"2026 \u96fb\u8def\u677f\u5c55 3D \u6a21\u64ec\u5716"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r4.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/p7-r4-768x432.webp","cap":"2026 \u96fb\u8def\u677f\u5c55 3D \u6a21\u64ec\u5716"}]}]}],"sims":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim1-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim2-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim3.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim3-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim4.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim4-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 4"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim5.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim5-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 5"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim6.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim6-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 6"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim7.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim7-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 7"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim8.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim8-768x432.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 8"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/sim9.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/sim9-768x512.webp","cap":"\u63d0\u6848\u6a21\u64ec\u5716 9"}],"pdfs":[{"title":"\u65bd\u5de5\u5716 1","cover":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-prev.webp","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-1-768x432.webp","cap":"\u65bd\u5de5\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-2-768x432.webp","cap":"\u65bd\u5de5\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-3.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-3-768x432.webp","cap":"\u65bd\u5de5\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-4.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-4-768x432.webp","cap":"\u65bd\u5de5\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-5.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-5-768x432.webp","cap":"\u65bd\u5de5\u5716 1"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-6.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg1-6-768x432.webp","cap":"\u65bd\u5de5\u5716 1"}]},{"title":"\u65bd\u5de5\u5716 2","cover":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-prev.webp","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-1-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-2-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-3.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-3-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-4.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-4-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-5.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-5-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-6.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-6-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-7.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-7-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-8.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-8-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-9.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-9-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-10.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-10-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-11.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-11-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-12.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-12-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-13.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-13-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-14.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-14-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-15.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-15-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-16.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-16-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-17.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-17-768x432.webp","cap":"\u65bd\u5de5\u5716 2"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-18.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg2-18-768x432.webp","cap":"\u65bd\u5de5\u5716 2"}]},{"title":"\u65bd\u5de5\u5716 3","cover":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-prev.webp","imgs":[{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-1.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-1-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-2.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-2-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-3.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-3-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-4.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-4-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-5.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-5-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-6.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-6-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-7.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-7-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-8.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-8-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-9.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-9-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-10.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-10-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-11.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-11-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-12.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-12-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-13.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-13-768x432.webp","cap":"\u65bd\u5de5\u5716 3"},{"src":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-14.webp","thumb":"\/3D-\/wp-content\/uploads\/2026\/10\/dwg3-14-768x432.webp","cap":"\u65bd\u5de5\u5716 3"}]}]};</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/dooooo-portfolio/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-
+<script id="dooooo-site-js" src="/3D-/wp-content/themes/dooooo-portfolio/assets/site.js?ver=1.0"></script>
 </body>
 </html>
